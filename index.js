@@ -1,4 +1,4 @@
-//STEP1.The user is prompted for froyo flavors upon entering the website.
+ //STEP1.The user is prompted for froyo flavors upon entering the website.
 //STEP2.The user's input string is split into an array of strings.
 //STEP3.A loop is used to iterate through the array of flavors.
 //STEP4.An object is used to keep count of how many orders there are of each flavor.
@@ -20,12 +20,13 @@ let flavors = {
 
 //STEP2.The user's input string is split into an array of strings.
       let userFlavors= getFlavors.split(",").map(flavor => flavor.trim().toLowerCase());
+       
 
 //STEP3.A loop to iterate through the array of flavors also to store & count. 
   function storeFlavors(orderedFlavors){
-        for (let Flavor of orderedFlavors) {
+        for (let flavor of orderedFlavors){
      
-        flavors[flavor]= (flavor[flavor] || 0) + 1;
+        flavors[flavor]= (flavors[flavor] || 0) +1;
      }      return flavors;
 }
 
